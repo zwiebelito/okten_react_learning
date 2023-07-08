@@ -1,0 +1,13 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 10px;
+    width: 60%;
+}
+
+.picture {
+    width: 200px;
+    height: 300px;
+}
