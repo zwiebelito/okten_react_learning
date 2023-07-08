@@ -1,0 +1,9 @@
+.launch {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid rebeccapurple;
+    border-radius: 10px;
+}
