@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border: 1px solid darkslateblue;
+    border-radius: 10px;
+    width: 250px;
+    height: 330px;
+    padding: 10px;
+}
+
+.buttonDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonDiv > button {
+    border: 1px solid crimson;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: lavender;
+}
