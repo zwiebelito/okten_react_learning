@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Car from "../Car/Car";
-import {Services} from "../../../Services/Services";
+import {Services} from "../../../services/Services";
 
 const Cars = ({onSave, setOnSave, setCarForUpdate}) => {
     const [cars, setCars] = useState([])

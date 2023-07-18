@@ -1,11 +1,14 @@
 import React from 'react';
-import {Services} from "../../../Services/Services";
+import {Services} from "../../../services/Services";
 
 const Car = ({car, setOnSave, setCarForUpdate}) => {
     const {id, brand, price, year} = car;
 
     const deleteCar = () => {
-        Services.deleteCars(id, setOnSave)
+        Services.deleteCars(id)
+            .then(()=> {
+            setOnSave(prev => !prev)
+        })
     }
 
     return (

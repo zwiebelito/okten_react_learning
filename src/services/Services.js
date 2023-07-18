@@ -7,11 +7,8 @@ const instance = axios.create({
 })
 
 export const Services = {
-    deleteCars: (id, setOnSave) => {
-        instance.delete(`/${id}`)
-            .then(()=> {
-                setOnSave(prev => !prev)
-            })
+    deleteCars: id => {
+        return axios.delete(`${EndPoints.CARS}/${id}`)
     },
 
     updateCars: (car, id) => {
