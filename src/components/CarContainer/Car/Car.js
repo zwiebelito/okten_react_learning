@@ -1,16 +1,13 @@
 import React from 'react';
+import {Services} from "../../../Services/Services";
 
 const Car = ({car, setOnSave, setCarForUpdate}) => {
     const {id, brand, price, year} = car;
 
     const deleteCar = () => {
-        fetch(`http://owu.linkpc.net/carsAPI/v1/cars/${id}`, {
-            method: 'DELETE',
-
-        }).then(()=> {
-            setOnSave(prev => !prev)
-        })
+        Services.deleteCars(id, setOnSave)
     }
+
     return (
         <div>
             <div>id: {id}</div>

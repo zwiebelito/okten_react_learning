@@ -1,13 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import Car from "../Car/Car";
+import {Services} from "../../../Services/Services";
 
 const Cars = ({onSave, setOnSave, setCarForUpdate}) => {
     const [cars, setCars] = useState([])
     useEffect(()=> {
-        fetch('http://owu.linkpc.net/carsAPI/v1/cars')
-            .then((response)=> response.json())
+        Services.getCars()
             .then(data => setCars(data))
     },[onSave])
+
     return (
         <div>
             {cars.map(car => <Car key={car.id} car={car} setOnSave={setOnSave} setCarForUpdate={setCarForUpdate}/>)}

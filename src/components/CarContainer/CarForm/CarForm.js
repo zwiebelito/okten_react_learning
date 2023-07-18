@@ -1,16 +1,12 @@
 import React, {useEffect} from 'react';
 import {useForm} from "react-hook-form";
+import {Services} from "../../../Services/Services";
 
 const CarForm = ({setOnSave, carForUpdate, setCarForUpdate}) => {
     const {register, handleSubmit, reset, setValue} = useForm()
 
     const save = (data) => {
-        fetch('http://owu.linkpc.net/carsAPI/v1/cars', {
-            headers: {'content-type': 'application/json'},
-            body: JSON.stringify(data),
-            method: 'POST'
-        })
-            .then((response) => response.json())
+            Services.postCar(data)
             .then(() => setOnSave(prev => !prev))
             reset()
     }
@@ -24,12 +20,7 @@ const CarForm = ({setOnSave, carForUpdate, setCarForUpdate}) => {
     })
 
     const update = (car) => {
-        fetch(`http://owu.linkpc.net/carsAPI/v1/cars/${carForUpdate.id}`, {
-            headers: {'content-type': 'application/json'},
-            method: 'PUT',
-            body: JSON.stringify(car)
-        })
-            .then((response) => response.json()).then(()=> {
+        Services.updateCars(car, carForUpdate.id).then(() => {
                 setOnSave(prev => !prev)
                 setCarForUpdate(null)
                 reset()
