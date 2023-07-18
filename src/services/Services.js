@@ -6,12 +6,12 @@ const instance = axios.create({
 })
 
 export const Services = {
-    getUsers: (data) => {
-        instance.post(Endpoints.USERS)
+    createUser: (data) => {
+        instance.post(Endpoints.USERS, data)
             .then((data)=> console.log(data.data))
     },
-    getComments: (data) => {
-        instance.post(Endpoints.COMMENTS)
+    createComment: (data) => {
+        instance.post(Endpoints.COMMENTS, data)
             .then((data)=> console.log(data.data))
     }
 }
