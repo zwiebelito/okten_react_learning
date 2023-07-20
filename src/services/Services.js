@@ -16,7 +16,7 @@ export const Services = {
     getComments: () => {
         return instance.get(Endpoints.COMMENTS).then(response => response.data)
     },
-    getPosts: () => {
+    getPosts: (id) => {
         return instance.get(Endpoints.POSTS).then(response => response.data)
     },
 }
