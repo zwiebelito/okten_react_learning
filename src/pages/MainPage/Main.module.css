@@ -1,0 +1,14 @@
+.photo {
+    width: 50%;
+    height: 50%;
+    border-radius: 20px;
+    border: 8px solid crimson;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 150px;
+}

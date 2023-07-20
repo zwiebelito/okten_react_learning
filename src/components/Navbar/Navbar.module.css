@@ -1,8 +1,11 @@
-.wrapper {
-    width: 100%;
+.navbar{
+    height: 10vh;
+    background-color: crimson;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 20px;
-    background-color: cornflowerblue;
+}
+.link{
+    text-decoration: none;
+    color: white;
 }

@@ -1,15 +1,16 @@
 import React from 'react';
-import styles from './Navbar.module.css'
-import {links} from "../../configs/links";
-import {Link, useLocation} from "react-router-dom";
+import {navbarLinks} from "../../constants/links/navbarLinks";
+import {Link} from "react-router-dom";
+import styles from './Navbar.module.css';
 
 const Navbar = () => {
-    const {pathname} = useLocation();
     return (
-        <div className={styles.wrapper}>
-            {links.map(link => <Link style={{color: link.path === pathname ? 'red' : 'blue'}}
-            to={link.path}>{link.label}</Link>)}
-        </div>
+        <nav className={styles.navbar}>
+            {navbarLinks.map(link => {
+                return <Link className={styles.link} to={link.path}> {link.label}</Link>
+            })}
+
+        </nav>
     );
 };
 

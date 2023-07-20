@@ -1,15 +1,16 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import styles from './Comment.module.css'
 
-const Comment = ({comment}) => {
+const Comment = ({comment, getPost}) => {
     const {postId, id, name, email, body} = comment;
+
     return (
-        <div>
+        <div onClick={() => getPost(id)} className={styles.border}>
+            <p>PostId: {postId}</p>
             <p>Id: {id}</p>
             <p>Name: {name}</p>
             <p>Email: {email}</p>
             <p>Body: {body}</p>
-            <Link to={postId.toString()}>Get Post</Link>
         </div>
     );
 };
