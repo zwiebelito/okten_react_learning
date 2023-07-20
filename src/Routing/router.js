@@ -2,22 +2,28 @@ import { createBrowserRouter } from "react-router-dom";
 import AppLayout from "../layout/AppLayout";
 import Todos from "../components/Todos/Todos";
 import Albums from "../components/Albums/Albums";
+import {AppRoutes} from "./AppRoutes";
+import Comments from "../components/Comments/Comments";
 
 export const router = createBrowserRouter([
     {
         element: <AppLayout />,
         children: [
             {
-                path: "/",
+                path: AppRoutes.MAIN,
                 element: <h2>Choose something from Navbar</h2>
             },
             {
-                path: "/todos",
+                path: AppRoutes.TODOS,
                 element: <Todos />
             },
             {
-                path: "/albums",
+                path: AppRoutes.ALBUMS,
                 element: <Albums />
+            },
+            {
+                path: AppRoutes.COMMENTS,
+                element: <Comments />
             },
         ]
     },

@@ -6,7 +6,7 @@ const Todo = ({todo}) => {
         <div>
             <p>Id: {id}</p>
             <p>Title: {title}</p>
-            <p>Completed: {completed}</p>
+            <p>Completed: {JSON.stringify(completed)}</p>
         </div>
     );
 };
