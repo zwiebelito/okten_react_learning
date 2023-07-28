@@ -1,0 +1,14 @@
+.user {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.user > img {
+    height: 8vh;
+    margin: 20px;
+}
+
+.user > p {
+    color: #fdfd04;
+}

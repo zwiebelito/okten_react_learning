@@ -1,0 +1,10 @@
+.poster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.poster > img {
+    width: 20vw;
+    height: 40vh;
+}

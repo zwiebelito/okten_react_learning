@@ -1,0 +1,9 @@
+.genre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.genre > h3 {
+    color: #f46969;
+}

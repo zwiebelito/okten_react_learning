@@ -1,0 +1,21 @@
+.movies {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons > button {
+    border-radius: 5px;
+    padding: 10px;
+    border: 2px solid #f46969;
+    color: #fdfd04;
+    background-color: darkslateblue;
+    margin: 0 5px;
+}

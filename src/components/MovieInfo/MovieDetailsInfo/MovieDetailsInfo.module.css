@@ -1,0 +1,44 @@
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info > img {
+    margin-top: 60px;
+    width: 28vw;
+    height: 70vh;
+}
+
+.title {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title > h3 {
+    color: #f46969;
+    margin-right: 20px;
+}
+
+.descr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.descr > p{
+    text-align: center;
+    width: 50%;
+    font-size: 24px;
+    color: #f46969;
+    font-weight: bolder;
+}

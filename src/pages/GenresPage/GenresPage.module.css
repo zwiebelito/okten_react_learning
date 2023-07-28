@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper > h2 {
+    color: darkslateblue;
+    font-size: 28px;
+    margin-top: 40px;
+}
