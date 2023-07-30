@@ -7,7 +7,7 @@ const MovieDetailsInfo = ({movie}) => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.info}>
-            <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt={title}/>
+                {poster_path && <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title}/>}
                 <div className={styles.title}>
                     <h3>{title}</h3>
                     <StarRatings
