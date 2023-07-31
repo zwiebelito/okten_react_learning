@@ -7,3 +7,4 @@ export * from "./MovieInfo/MovieDetailsInfo/MovieDetailsInfo";
 export * from "./MoviesList/MoviesList";
 export * from "./MoviesList/MoviesListCard/MoviesListCard";
 export * from "./UserInfo/UserInfo";
+export * from './GenresForMovie/GenresForMovie';

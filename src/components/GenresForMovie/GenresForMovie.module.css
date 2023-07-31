@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.wrapper > p{
+    margin: 3px;
+    color: darkslateblue;
+    font-weight: lighter;
+    font-size: 18px;
+}
