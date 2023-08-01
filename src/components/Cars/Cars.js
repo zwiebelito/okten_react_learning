@@ -1,5 +1,6 @@
 import React from 'react';
 import {Car} from "./Car/Car";
+import {CarsService} from "../../services/CarsService";
 
 class Cars extends React.Component {
     constructor(props) {
@@ -10,8 +11,7 @@ class Cars extends React.Component {
     }
 
    componentDidMount() {
-        fetch('http://owu.linkpc.net/carsAPI/v1/cars').then((data) => data.json())
-            .then(cars => this.setState({cars: cars}))
+        CarsService.getAll().then(cars => this.setState({cars: cars}))
    }
 
     render() {

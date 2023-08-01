@@ -1,5 +1,6 @@
 import React from 'react';
 import {Comment} from "./Comment/Comment";
+import {CommentsService} from "../../services/CommentsService";
 
 class Comments extends React.Component {
     constructor(props) {
@@ -9,8 +10,7 @@ class Comments extends React.Component {
         }
     }
     componentDidMount() {
-        fetch('https://jsonplaceholder.typicode.com/comments').then(data => data.json())
-            .then(comment => this.setState({comments: comment }))
+        CommentsService.getAll().then(comment => this.setState({comments: comment }))
     }
 
     render() {
