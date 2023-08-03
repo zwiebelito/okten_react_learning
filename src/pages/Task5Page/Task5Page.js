@@ -1,10 +1,11 @@
 import React from 'react';
-const App = () => {
+
+const Task5Page = () => {
     return (
         <div>
-          
+            Task5Page
         </div>
     );
 };
 
-export default App;
+export {Task5Page};
