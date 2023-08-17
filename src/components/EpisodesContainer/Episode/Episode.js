@@ -6,13 +6,13 @@ const Episode = ({episode}) => {
     const charactersIds = episode.characters;
     const navigate = useNavigate();
 
-    const moveToCharactersPage = () => {
+    const showCharacters = () => {
         navigate('/characters', {state: {charactersIds, name}});
     }
 
     return (
         <div style={{backgroundColor: 'cadetblue', padding: '10px', textAlign: 'center', margin: '15px', border: '1px solid darkslateblue'}}>
-            <div onClick={moveToCharactersPage}>
+            <div onClick={showCharacters}>
                 <p>Title: {name}</p>
                 <p>Air date: {air_date}</p>
                 <p>Episode: {chapter}</p>
